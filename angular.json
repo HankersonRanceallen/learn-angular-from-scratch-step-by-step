@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "learn-angular-from-scratch"
+  "defaultProject": "learn-angular-from-scratch",
+  "cli": {
+    "analytics": false
+  }
 }
