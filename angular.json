@@ -31,8 +31,8 @@
               "./node_modules/font-awesome/css/font-awesome.css",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
+            // Remove "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
@@ -64,11 +64,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "learn-angular-from-scratch:build"
+            // Change "browserTarget" to "buildTarget"
+            "buildTarget": "learn-angular-from-scratch:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "learn-angular-from-scratch:build:production"
+              "buildTarget": "learn-angular-from-scratch:build:production"
             }
           }
         },
@@ -139,7 +140,7 @@
       }
     }
   },
-  "defaultProject": "learn-angular-from-scratch",
+  // Remove the "defaultProject" line
   "cli": {
     "analytics": false
   }
