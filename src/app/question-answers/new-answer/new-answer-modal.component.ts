@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Validators, FormGroup, FormControl} from '@angular/forms';
 import { AnswersService } from '../../services/answers.service';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'new-answer',
@@ -42,3 +42,4 @@ export class NewAnswerModalComponent implements OnInit{
   }
 
 }
+

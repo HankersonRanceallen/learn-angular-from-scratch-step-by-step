@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Validators, FormGroup, FormControl} from '@angular/forms';
 import { QuestionsService } from '../../services/questions.service';
 import { SlugifyPipe } from '../../shared/slugify.pipe';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'new-question-modal',
@@ -49,3 +49,4 @@ export class NewQuestionModalComponent implements OnInit{
 
 
 }
+

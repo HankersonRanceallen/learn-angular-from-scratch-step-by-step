@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { AnswersService } from '../../services/answers.service';
 
 @Component({
@@ -28,3 +28,4 @@ export class DeleteAnswerModalComponent {
   }
 
 }
+

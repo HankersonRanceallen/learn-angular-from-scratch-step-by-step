@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClientClient } from '@angular/common/http';
 import { CategoryModel } from "../categories/category.model";
 
 @Injectable()

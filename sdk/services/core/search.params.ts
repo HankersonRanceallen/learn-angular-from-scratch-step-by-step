@@ -1,6 +1,6 @@
 /* tslint:disable */
 import { Injectable } from '@angular/core';
-import { URLSearchParams } from '@angular/http';
+import { HttpClientParams } from '@angular/common/http';
 /**
 * @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
 * @module JSONSearchParams

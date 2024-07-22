@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; // Import HttpClientModule and HTTP_INTERCEPTORS
 
+// Import your components, services, and resolvers
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoriesResolver } from './categories/categories.resolver';
 import { CategoriesService } from './services/categories.service';
-
 import { CategoryQuestionsResolver } from './category-questions/category-questions.resolver';
 import { CategoryQuestionsComponent } from './category-questions/category-questions.component';
 import { NewQuestionModalComponent } from './category-questions/new-question/new-question-modal.component';
 import { DeleteQuestionModalComponent } from './category-questions/delete-question/delete-question-modal.component';
 import { QuestionsService } from './services/questions.service';
-
 import { NewAnswerModalComponent } from './question-answers/new-answer/new-answer-modal.component';
 import { UpdateAnswerModalComponent } from './question-answers/update-answer/update-answer-modal.component';
 import { DeleteAnswerModalComponent } from './question-answers/delete-answer/delete-answer-modal.component';
 import { QuestionAnswersComponent } from './question-answers/question-answers.component';
 import { QuestionAnswersResolver } from './question-answers/question-answers.resolver';
 import { AnswersService } from './services/answers.service';
-
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { myInterceptorInterceptor } from './my-interceptor.interceptor'; // Import your interceptor
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule // Add HttpClientModule here
   ],
   entryComponents: [
     DeleteQuestionModalComponent,
@@ -52,7 +53,8 @@ import { SharedModule } from './shared/shared.module';
     AnswersService,
     CategoryQuestionsResolver,
     CategoriesResolver,
-    QuestionAnswersResolver
+    QuestionAnswersResolver,
+    { provide: HTTP_INTERCEPTORS, useValue: myInterceptorInterceptor, multi: true } // Register the interceptor
   ],
   bootstrap: [AppComponent]
 })

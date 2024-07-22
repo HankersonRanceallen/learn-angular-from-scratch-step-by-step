@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Validators, FormGroup, FormControl} from '@angular/forms';
 import { AnswersService } from '../../services/answers.service';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'update-answer-modal',
@@ -43,3 +43,4 @@ export class UpdateAnswerModalComponent implements OnInit{
   }
 
 }
+

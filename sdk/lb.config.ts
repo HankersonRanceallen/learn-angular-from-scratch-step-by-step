@@ -24,7 +24,7 @@ export class LoopBackConfig {
   private static version: string | number = 'api';
   private static authPrefix: string = '';
   private static debug: boolean = true;
-  private static filterOn: string = 'headers';
+  private static filterOn: string = 'HttpHttpHttpHeaders';
   private static secure: boolean = false;
   private static withCredentials: boolean = false;
 
@@ -64,12 +64,12 @@ export class LoopBackConfig {
     LoopBackConfig.filterOn = 'url';
   }
 
-  public static filterOnHeaders(): void {
-    LoopBackConfig.filterOn = 'headers';
+  public static filterOnHttpHttpHttpHeaders(): void {
+    LoopBackConfig.filterOn = 'HttpHttpHttpHeaders';
   }
 
-  public static isHeadersFilteringSet(): boolean {
-    return (LoopBackConfig.filterOn === 'headers');
+  public static isHttpHttpHttpHeadersFilteringSet(): boolean {
+    return (LoopBackConfig.filterOn === 'HttpHttpHttpHeaders');
   }
 
   public static setSecureWebSockets(): void {

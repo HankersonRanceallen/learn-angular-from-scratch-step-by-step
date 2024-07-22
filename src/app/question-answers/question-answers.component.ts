@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AnswersService } from '../services/answers.service'
 import { Question } from '../../../sdk/models/Question';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { DeleteAnswerModalComponent } from './delete-answer/delete-answer-modal.component';
 import { NewAnswerModalComponent } from './new-answer/new-answer-modal.component';
 import { UpdateAnswerModalComponent } from './update-answer/update-answer-modal.component';
@@ -80,3 +80,4 @@ export class QuestionAnswersComponent {
   }
 
 }
+
